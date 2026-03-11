@@ -1,16 +1,34 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Problem Description
+Create a React application where a user can log in and log out, and the login state should be accessible across multiple components without using prop drilling.
+# Requirements
+ State Management using useReducer 
+Use the useReducer hook to manage authentication state.
+The state should include:
+isLoggedIn (boolean)
+user (object containing name)
+Implement the following actions:
+LOGIN
+LOGOUT
+ Global State Sharing using useContext 
+Create an AuthContext using createContext.
+Wrap the application inside AuthContext.Provider.
+Provide the authentication state and dispatch function to child components.
+Component Implementation 
+Create the following components:
+Login Component
+Displays a login button.
+Dispatches the LOGIN action with a username.
+Navbar Component
+Displays “Welcome, Username” when logged in.
+Displays “Please Login” when logged out.
+Dashboard Component
+Visible only when the user is logged in.
+Contains a logout button.
+ Usage of Hooks and Proper Flow 
+Use useContext to access authentication data in components.
+Ensure proper state flow:
+User Action → Dispatch → Reducer → State Update → UI Re-render
+Expected Outcome
+The application should update UI dynamically based on login state.
+No props should be passed manually between components.
+State management should be centralized and predictable

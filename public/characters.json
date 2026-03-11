@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Walter White",
+        "alias": "Heisenberg",
+        "occupation": "Chemistry Teacher / Meth King Pin",
+        "status": "Deceased",
+        "potrayed_by": "Bryan Cranston",
+        "image": "https://upload.wikimedia.org/wikipedia/en/0/03/Walter_White_S5B.png"
+    },
+    {
+        "id": 2,
+        "name": "Jesse Pinkman",
+        "alias": "Cap n' Cook",
+        "occupation": "Meth Manufacturer",
+        "status": "Alive",
+        "potrayed_by": "Aaron Paul",
+        "image": "https://upload.wikimedia.org/wikipedia/en/c/c6/Jesse_Pinkman_S5B.png"
+    }
+]
